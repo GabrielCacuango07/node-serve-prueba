@@ -17,7 +17,7 @@ app.use(require('./routes/usuario'));
 
 
 
-mongoose.connect('mongodb://localhost:27017/impresora', (err) => {
+mongoose.connect(process.env.URLDB, (err) => {
     if (err) throw err;
     console.log('Base de datos online');
 });
